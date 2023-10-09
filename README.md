@@ -34,9 +34,54 @@ Optimizes the performance of child components by preventing unnecessary re-rende
 </ul>
 
 <hr/>
+<p>
+ 
+Here's how the useCallback hook behaves based on the dependency array:
+</p>
+
+<h2>
+ 1. Empty Dependency Array ([]):
+</h2>
+<p>
+ 
+When you provide an empty dependency array, the memoized callback function is created once during the initial render and remains the same for the entire component's lifecycle.
+</p>
+<p>
+This is useful when you want a stable callback function that doesn't depend on any variables or props.
+</p>
+ Example:
+<code>
+ const memoizedCallback = useCallback(() => {
+  // This function is created once and doesn't depend on any variables or props.
+}, []);
+</code>
+
+<h2>2. Dependency Array with Variables:</h2>
+
+<p>When you provide a dependency array with one or more variables or props, the memoized callback function will be recreated whenever any of those dependencies change between renders.</p>
+<p>The memoized function will incorporate the latest values of the specified dependencies each time it is recreated.</p>
+Example:
+<code>
+ const memoizedCallback = useCallback(() => {
+  // This function depends on `dependency1` and `dependency2`.
+}, [dependency1, dependency2]);
+
+</code>
+
+<h2>3. No Dependency Array (Omitting the Array):</h2>
+
+<p>When you omit the dependency array altogether, the memoized callback function will be recreated on every render, including the initial render.</p>
+<p>This can be useful when you want the callback function to have access to the latest values of variables or props without explicitly specifying them as dependencies.</p>
+Example:
+<code>
+ const memoizedCallback = useCallback(() => {
+  // This function depends on variables or props that may change.
+});
+
+</code>
 
  <h3>useCallback hook</h3>
-      <p>
+ <p>
         <br /> Purpose:
         <br />
         useCallback is a React hook used for optimizing performance by memoizing
