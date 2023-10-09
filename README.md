@@ -33,6 +33,8 @@ Optimizes the performance of child components by preventing unnecessary re-rende
  </li>
 </ul>
 
+<hr/>
+
  <h3>useCallback hook</h3>
       <p>
         <br /> Purpose:
