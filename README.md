@@ -1,5 +1,38 @@
 # useCallback-hooks
 
+<h1>useCallback:</h1>
+<ul>
+ <li>
+  
+It is used to memoize callback functions in a parent component.
+ </li>
+ <li>
+  
+Helps ensure that the callback function is only recreated when its dependencies (specified in the dependency array) change.
+ </li>
+ <li>
+  
+Optimizes the performance of the parent component by preventing unnecessary re-creation of callback functions.
+ </li>
+</ul>
+
+<h1>React.memo:</h1>
+
+<ul>
+ <li>
+  
+It is used to memoize functional components.
+ </li>
+ <li>
+  
+Prevents a functional component from re-rendering unless its props have changed.
+ </li>
+ <li>
+  
+Optimizes the performance of child components by preventing unnecessary re-renders when their props have not changed.
+ </li>
+</ul>
+
  <h3>useCallback hook</h3>
       <p>
         <br /> Purpose:
