@@ -79,7 +79,7 @@ Example:
 });
 
 </code>
-
+<hr/>
  <h3>useCallback hook</h3>
  <p>
         <br /> Purpose:
